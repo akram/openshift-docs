@@ -23,7 +23,7 @@ Three components make up the EFK logging stack:
 
 * https://www.elastic.co/products/elasticsearch[Elasticsearch]: An object store where all logs are stored.
 * http://www.fluentd.org/architecture[Fluentd]: Gathers logs from nodes and feeds them to Elasticsearch.
-* https://www.elastic.co/guide/en/kibana/current/introduction.html[Kibana]: A web UI for Elasticsearch.
+* https://www.elastic.co/guide/en/kibana/current/introduction.html[Kibana]: system:serviceaccount:default:loggingA web UI for Elasticsearch.
 
 Once deployed in a cluster, the stack aggregates logs from all nodes and
 projects into Elasticsearch, and provides a Kibana UI to view any logs. Cluster
@@ -156,7 +156,7 @@ the following example:
 ====
 ----
 $ oc policy add-role-to-user edit \
-            system:serviceaccount:default:logging-deployer
+            system:serviceaccount:logging:logging-deployer
 ----
 ====
 
